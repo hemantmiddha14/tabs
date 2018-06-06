@@ -1,0 +1,105 @@
+.center{
+
+    /* text-align: center; */
+
+         margin-left: auto;
+         margin-right: auto;
+         text-align: center;
+         width: 60%;
+}
+
+.form-group{
+
+    display: block;
+    text-align: left;
+
+}
+
+
+ul{
+  width: 100%;
+  text-align: center;
+}
+li{
+  width: 32.9%;
+}
+.abc, .xyz, .pqr{
+  width: 100%;
+}
+
+
+form{
+
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+     width: 60%;
+}
+
+.a, .b, .c, .d, .e{
+  margin-top: -20px;
+  font-size: 12px;
+}
+input[type=text], input[type=password], input[type=email]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background:whitesmoke;
+}
+
+input[type=text]:focus, input[type=password]:focus,  input[type=email]:focus{
+    background-color: lightgray;
+    outline: none;
+}
+
+.button1 {
+    background-color: lightseagreen;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    color: white;
+}
+
+.button1:hover {
+    opacity:1;
+}
+
+.button {
+    background-color: dodgerblue;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    color: white;
+    float: right;
+}
+
+.button:hover {
+    opacity:1;
+}
+@media only screen and (max-width: 600px) {
+  .center{
+
+      text-align: center;
+      width: 100%;
+    }
+  .active, .li2, .li3{
+      margin-left: auto;
+      margin-right: auto;
+
+      text-align: center;
+      width: 100%;
+    }
+  form{
+
+        margin-left: auto;
+       margin-right: auto;
+       text-align: center;
+       width: 100%;
+     }
+  }
