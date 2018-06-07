@@ -41,8 +41,6 @@ $( document ).ready(function() {
           $("#mail").text("*This Field is required.").css("color", "red");
           }
           else {
-
-
           if (email.indexOf('@')<=0){
             $('#email').css({"border-style": "solid", "border-color": "red", "border-width": "1px"});
             $("#mail").text("*Please enter a valid Email Address.").css("color", "red");
@@ -79,10 +77,31 @@ $( document ).ready(function() {
       });
 
       $( "#next1" ).on( "click", function() {
+        var fname = $("#fname").val();
+        var lname = $("#lname").val();
+        var email = $("#email").val();
+        var pwd = $("#pwd").val();
+        var pwdrep = $("#pwdrep").val();
+        var em = $("#email").val().length;
+        if ((fname!="") && (lname!="") && (email!="") && (email.indexOf('@')>0) && (pwd!="") && (pwdrep!="") && (pwdrep==pwd) && ((email.charAt(em-4) == '.') || (email.charAt(em-3) == '.'))) {
            $("#tab2").trigger("click");
+         }
+         else {
+          Validate();
+         }
       });
       $( "#next2" ).on( "click", function() {
+        var fn = $("#fn").val();
+        var mn = $("#mn").val();
+        var hadd = $("#hadd").val();
+        var ct = $("#ct").val();
+        var st = $("#st").val();
+        if ((fn!="")&& (mn!="") && (hadd!="") && (ct!="") && (st!="")) {
            $("#tab3").trigger("click");
+         }
+         else {
+           Validate2();
+         }
       });
       $( "#back2" ).on( "click", function() {
            $("#tab2").trigger("click");
@@ -132,6 +151,9 @@ function Validate(){
       $("#psw2").text("*Passwords do not match").css("color", "red");
     }
 
+}
+
+function Validate2(){
 
   var fn = $("#fn").val();
   var mn = $("#mn").val();
@@ -158,6 +180,8 @@ function Validate(){
         $('#st').css({"border-style": "solid", "border-color": "red", "border-width": "1px"});;
         $("#state").text("*This Field is required.").css("color", "red");
     }
+}
+function Validate3(){
 
   var cname = $("#cname").val();
   var dname = $("#dname").val();
@@ -183,5 +207,4 @@ function Validate(){
     $('#mob').css({"border-style": "solid", "border-color": "red", "border-width": "1px"});
     $("#mno").text("*Please Enter a valid mobile number").css("color", "red");
     }
-
 }
